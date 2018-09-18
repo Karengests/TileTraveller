@@ -1,36 +1,39 @@
-tile = 1,1
+#https://github.com/Karengests/TileTraveller/blob/master/tile.traveller1.py
+x = 1
+y = 1
+tile = (x,y)
 
-while
-    if tile == "1,1": 
-        print("You can travel: ", N)
-        direction = input(str("Direction: "))
+while tile != (3,3)
+    print("You can Travel:", end='')
+    if tile == (1,1): 
+        print("You can travel: (N)orth")
+           
+    elif tile == (1,2):
+        print("You can travel: (N)orth or (E)ast or (S)outh.")
 
-        if direction == "n" or "N":
-            print("You can travel: N(orth).")
-        else:
-            print("Not valid direction!")
+    elif tile == (1,3):
+        print("You can travel: (S)outh or (E)east")
+
+    elif tile == (2,1):
+        print("You can travel: (N)orth")
+
+    elif tile == (2,2):
+        print("You can travel: (S)outh or (W)est")
+
+    elif tile == (2,3):
+        print("You can travel: (W)est or (E)ast")
+
+    elif tile == (3,1):
+        print("Victory!")
+
+    elif tile == (3,2):
+        print("You can travel: (N)orth")
+
+    elif tile == (3,3):
+        print("You can travel: (S)outh or (W)est")
+
+    direction = input(str("Input a direction: "))
 
 
-    elif tile == "1,2":
-        print("You can travel: ",N, S, E)
 
-    elif tile == "1,3":
-        print("You can travel: ", S, E)
-
-    elif tile == "2,1":
-        print("You can travel: ", N)
-
-    elif tile == "2,2":
-        print("You can travel: ", S, W)
-
-    elif tile == "2,3":
-        print("You can travel: ", W, E)
-
-    elif tile == "3,1":
-        print("You can travel: ", N)
-
-    elif tile == "3,2":
-        print("You can travel: ", N )
-
-    elif tile == "3,3":
-        print("You can travel: ", S, W)
+    
